@@ -62,3 +62,7 @@ data only.
 These simplifications are documented here because understanding where a 
 pipeline diverges from the full specification is part of working inside 
 measure logic.
+
+A future iteration will implement multiple BP readings per member with 
+most-recent selection logic and same-day tie-breaking per the full NCQA 
+specification.
