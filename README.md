@@ -1,9 +1,9 @@
 # HEDIS CBP Measure Logic: Controlling High Blood Pressure
 
-This project demonstrates hands-on HEDIS measure logic using Python, DuckDB, and SQL. 
-It implements the Controlling High Blood Pressure (CBP) measure per NCQA specifications, 
-including denominator construction, clinical exclusions, numerator evaluation, and a 
-COVID-19 impact analysis layer.
+This is a portfolio project demonstrating how I approach clinical quality 
+measure logic. It translates the NCQA HEDIS CBP specification into working 
+SQL and Python, including denominator construction, clinical exclusions, 
+numerator evaluation, and a COVID-19 impact analysis layer.
 
 ## What this project does
 
