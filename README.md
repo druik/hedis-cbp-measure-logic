@@ -36,3 +36,29 @@ quality issues before they affect reporting.
 4. Install dependencies: `pip install duckdb jupyter pandas`
 5. Launch Jupyter: `jupyter notebook`
 6. Open `hedis_cbp_measure_logic.ipynb` and run all cells in order
+
+## Known Simplifications
+
+This project is a portfolio demonstration, not a production implementation. 
+A few intentional simplifications worth noting:
+
+**Denominator:**
+The full NCQA CBP specification requires at least two outpatient visits with 
+a hypertension diagnosis on different dates of service. This implementation 
+uses a single visit for simplicity.
+
+**BP Selection Rule:**
+The NCQA specification requires using the most recent BP reading during the 
+measurement year on or after the second hypertension diagnosis. If multiple 
+readings occur on the same date, the lowest systolic and lowest diastolic are 
+used. This implementation uses any BP reading on file without applying the 
+most-recent or same-day selection rules.
+
+**Data Source:**
+Production HEDIS reporting uses hybrid methodology combining administrative 
+claims data with medical record review. This implementation uses synthetic 
+data only.
+
+These simplifications are documented here because understanding where a 
+pipeline diverges from the full specification is part of working inside 
+measure logic.
